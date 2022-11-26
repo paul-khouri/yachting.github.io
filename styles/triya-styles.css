@@ -9,7 +9,9 @@
 }
 body{
     font-size: 100%;
-    background-color: var(--main-bg)
+    background-color: var(--main-bg);
+    font-weight: lighter;
+    letter-spacing: 0.1em;
 }
 .bg-main{
     background-color: var(--main-bg-color)
@@ -19,12 +21,13 @@ body{
 }
 .nav-link, .nav-link:hover{
     color: var(--main-nav-text);
-    font-size: 1.5em;
-}
+    font-size: 1.2em;
 
+}
 
 .nav-item:hover{
     background-color:var(--main-nav-hover);
+    border-radius: 0.5em;
 
 }
 .container-bg{

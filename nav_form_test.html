@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TRIYA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/triya-styles.css">
+</head>
+<body>
+<!-- hero -->
+<div class="container-fluid bg-main">
+  <img class="img-fluid mx-auto d-block" src="images/hero_image.jpg" alt="">
+</div>
+<!-- nav -->
+<nav class="navbar navbar-expand-sm navbar-light bg-nav">
+  <div class="container-fluid">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="programs.html">Programs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="information.html">Information</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#coaches">Coaches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="programs.html#contactform">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-nav navbar-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="programs.html">Programs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="information.html">Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#coaches">Coaches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="programs.html#contactform">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-end">
+      <button type="button" class="btn btn-outline-light me-2">Login</button>
+      <a href="" class="btn btn-outline-light me-2">Login</a>
+    </div>
+  </div>
+</nav>
+<style>
+  .vote{
+    width:50%;
+    margin: auto;
+  }
+  .col-6 input{
+    font-size: 2em;
+  }
+</style>
+<div class="container-lg container-bg my-5 px-5 py-1">
+  <form action='' method='get' class='mx-auto py-0 px-3 speaker-form'>
+    <div class="row">
+    <div class="col-6">
+      <label for="A" class="form-label"> Candidate A </label>
+      <input id="A" class="form-control" name="Full Name" type="number" min="1" max="4" step="1">
+    </div>
+    <div class="col-6">
+      <label for="B" class="form-label"> Candidate B </label>
+      <input id="B" class="form-control" name="Full Name" type="number" min="1" max="4" step="1">
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="C" class="form-label"> Candidate C </label>
+        <input id="C" class="form-control" name="Full Name" type="number" min="1" max="4" step="1">
+      </div>
+      <div class="col-6">
+        <label for="D" class="form-label"> Candidate D </label>
+        <input id="D" class="form-control" name="Full Name" type="number" min="1" max="4" step="1">
+      </div>
+    </div>
+    <div class="text-end my-4">
+      <button type="reset" class="btn btn-primary">Reset</button>
+      <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+<script>
+  let ids=["A","B","C","D"]
+  let items=[]
+  for(let i=0; i<ids.length; i++){
+    let item = document.getElementById(ids[i]);
+    item.value = "";
+    items.push(item);
+  }
+  for(let i=0; i<items.length; i++){
+      items[i].value=i+1;
+  }
+  let submit = document.getElementById("submit")
+  submit.disabled = true;
+  console.log(submit)
+  console.table(items)
+
+  function check_form(){
+    for(let i=0; i<items.length; i++){
+      console.log(items[i].value)
+    }
+  }
+
+  check_form()
+
+  let labels = document.getElementsByTagName("label");
+  for(let i=0; i<labels.length; i++){
+    console.log(labels[i].htmlFor);
+  }
+</script>
+
+
+
+<div class="container-lg container-bg my-5 px-5 py-1">
+  <form action='' method='get' class='mx-auto py-0 px-3 speaker-form'>
+
+    <div>
+      <label for="A1" class="form-label"> Candidate A </label>
+      <input id="A1" class="form-control" name="Full Name" type="number" min="1" max="4" step="1">
+    </div>
+    <div>
+      <label for="B1" class="form-label"> Candidate B </label>
+      <input id="B1" class="form-control" name="Full Name" type="number" min="1" max="4" step="1">
+    </div>
+    <select class="form-select form-select-lg mt-5" aria-label=".form-select-lg example">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <div class="mb-3">
+      <label for="FF" class="form-label">Default file input example</label>
+      <input class="form-control" type="file" id="FF">
+    </div>
+    <div>
+      <label for="TA" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="TA" rows="6"></textarea>
+    </div>
+    <div class="text-end my-4">
+      <button type="reset" class="btn btn-primary">Reset</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+<style>
+  .speaker-form{
+    background: #F6F7F8;
+    border: 1px solid black;
+    border-radius: 15px;
+
+    width:50%;
+    padding: 0em;
+    margin: 0 0 0em 0;
+  }
+  .speaker-form label{
+    color: black;
+  }
+</style>
+<div class="container-lg container-bg my-5 px-5 py-1">
+<form action='' method='get' class='mx-auto py-0 px-3 speaker-form'>
+  <div>
+    <label for="fullname" class="form-label"> Name </label>
+    <input id="fullname" class="form-control" name="Full Name" type="text">
+  </div>
+  <div>
+    <label for="email" class="form-label"> Email </label>
+    <input id="email" class="form-control" name="Email" type="email">
+  </div>
+  <select class="form-select form-select-lg mt-5" aria-label=".form-select-lg example">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Default file input example</label>
+    <input class="form-control" type="file" id="formFile">
+  </div>
+  <div>
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+  </div>
+  <div class="text-end my-4">
+    <button type="reset" class="btn btn-primary">Reset</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div>
+
+
+<div class="container-lg container-bg my-5 px-5 py-1">
+  <form class="w-50 mx-auto">
+    <div class="mb-0">
+      <label for="program_name" class="form-label">Program Name:</label>
+      <input type="text" class="form-control" id="program_name" name="name" >
+    </div>
+    <div class="mb-0">
+      <label for="short_description" class="form-label">Short Description:</label>
+      <input type="text" class="form-control" id="short_description" name="subtitle">
+    </div>
+    <div>
+      <label for="long_description" class="form-label">Long Description</label>
+      <textarea class="form-control" id="long_description" name="description" rows="6"></textarea>
+    </div>
+    <div class="mb-0">
+      <label for="coaching_fee" class="form-label">Coaching Fee:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+      <input type="number" class="form-control" id="coaching_fee" name="coachingfee">
+      </div>
+    </div>
+    <div class="mb-0">
+      <label for="boathire_fee" class="form-label">Boat Hire:</label>
+      <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+      <input type="number" class="form-control" id="boathire_fee" name="boathire">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="imageupload" class="form-label">Add Image</label>
+      <input class="form-control" type="file" id="imageupload">
+    </div>
+    <div class="text-end mb-2">
+      <button type="reset" class="btn btn-primary">Reset</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+<div class="container-lg container-bg my-5 px-5 py-1">
+  <form class="w-50 mx-auto">
+    <div class="mb-0">
+      <label for="username" class="form-label">User Name</label>
+      <input type="text" class="form-control" id="username" name="User Name" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input type="password" class="form-control" id="pwd" name="Password">
+    </div>
+    <div class="text-end mb-2">
+    <button type="reset" class="btn btn-primary">Reset</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-lg container-bg my-5 px-5 py-1">
+  <form class="w-50 mx-auto">
+    <div aria-label="Basic radio toggle button group">
+      <div class="row">
+      <div class="col-md">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio1"><img class="img-fluid" src="images/barrie.png"></label>
+      </div>
+      <div class="col-md">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio2"><img class="img-fluid" src="images/barrie.png"></label>
+      </div>
+      <div class="col-md">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio3"><img class="img-fluid" src="images/barrie.png"></label>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnradio4"><img class="img-fluid" src="images/barrie.png"></label>
+        </div>
+        <div class="col-md">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnradio5"><img class="img-fluid" src="images/barrie.png"></label>
+        </div>
+        <div class="col-md">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnradio6"><img class="img-fluid" src="images/barrie.png"></label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-end mb-2">
+      <button type="reset" class="btn btn-primary">Reset</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
