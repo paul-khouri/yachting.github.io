@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TRIYA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/triya-styles-new.css">
+</head>
+<body>
+<!-- hero -->
+<div class="container-fluid bg-main">
+<!-- nav -->
+<nav class="navbar navbar-expand-sm navbar-light bg-nav">
+    <div class="container-fluid">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="programs.html">Programs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="information.html">Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#coaches">Coaches</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="programs.html#contactform">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+   <img class="img-fluid" src="images/placeholder_banner.png">
+</div>
+<style>
+    body{
+         --main-bg-color: rgb(193, 206, 218);
+        --titles: rgb(237,46,46);
+        background-color: var(--main-bg-color);
+    }
+    p{
+        font-size: 1.2em;
+    }
+    .left, .right{
+        border:2px solid pink;
+        padding: 0;
+    }
+    .news, .about, .coaches, .program{
+        border: 0px solid red;
+        margin: 0em 0em 1em 0;
+        box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2);
+        background-color: white;
+        padding:1em;
+    }
+    .program div p:nth-child(2){
+        font-size: 1.5em;
+        font-style: italic;
+    }
+        .about div:first-child{
+        border-right: 1px solid black;
+    }
+    .about div{
+        border: 0px solid green;
+    }
+    .trans{
+        opacity: 0.5;
+    }
+
+    h2, h3, h4{
+        font-weight: bolder;
+        color: var(--titles);
+        border-bottom: 1px solid black;
+        padding-bottom: 0.5em
+    }
+
+
+    /*---- screen --- */
+@media only screen and (max-width: 767px) {
+    /* --reverse flex for images on the left --- */
+    .main-cols, .reverse {
+        flex-direction: column-reverse;
+    }
+}
+</style>
+<h2>Our Programs</h2>
+<div class="container-lg">
+
+
+    <div class="row align-items-center program">
+        <div class="col-md-6 ">
+            <h2>Learn to Sail</h2>
+                <p>This is on weekdays from 4pm until 8pm</p>
+                <p>Focuses on the basics of sailing learning how to tack, gybe, position in the boat and rigging.
+                Currently this runs everyday after school apart from a Wednesday and is perfect for gaining
+                confidence in and around a 420 boat. If your sailor has raced another type of boat before
+                or are new to sailing this is the course for them.</p>
+        </div>
+        <div class="col-md-6"><img class="img-fluid" src="images/placeholder.png" alt=""></div>
+    </div>
+
+    <div class="row align-items-center program reverse">
+        <div class="col-md-6 ">
+            <h2>Teams Sailing</h2>
+            <p>Short course sailing</p>
+            <p>This is for more experienced sailors who are interested in tactics, teams
+                racing consists of 3 boats (2 people per boat) per team and two teams,
+                they complete in a short course race(less than 15 minutes long).
+                The team that wins is the one that gets the most amount of boats over the line first,
+                TRIYA is aiming to have 3 teams compete in the regionals, 1 from Wellington College,
+                1 open team and 1 from Scots College.</p>
+        </div>
+        <div class="col-md-6 order-first"><img class="img-fluid" src="images/placeholder.png" alt=""></div>
+    </div>
+
+    <div class="row align-items-center program">
+        <div class="col-md-6 ">
+            <h2>Fleet Racing</h2>
+            <p>Trapezing and kiting</p>
+            <p>This is for sailors aiming to compete in Nationals in 2023 who are
+                graduates of one of the sailing programs offered, each boats consists of a skipper
+                and a crew. The crew will learn how to trapeze and mange a kite, and the skipper will
+                be in charge of steering and controls to effect the main sail.
+                Fleet racing sails on a Saturday with training in the morning and racing in the afternoon.</p>
+        </div>
+        <div class="col-md-6"><img class="img-fluid" src="images/placeholder.png" alt=""></div>
+    </div>
+</div>
+<h4> Course fees </h4>
+<div class="container-lg">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col" class="text-navblue">Costs</th>
+            <th scope="col" class="text-navblue">Learn to Sail</th>
+            <th scope="col" class="text-navblue">Teams Racing</th>
+            <th scope="col" class="text-navblue">Fleet Racing</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row" class="text-navblue">Coaching fee</th>
+            <td>$190</td>
+            <td>$170</td>
+            <td>$300</td>
+        </tr>
+        <tr>
+            <th scope="row" class="text-navblue">Boat hire</th>
+            <td>none</td>
+            <td>none</td>
+            <td>$125</td>
+        </tr>
+        <tr>
+            <th scope="row" class="text-navblue">Total</th>
+            <td>$190</td>
+            <td>$170</td>
+            <td>$425</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2> Sign up for membership</h2>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- quote -->
+
+
+
+<!-- footer -->
+<footer class="container-fluid bg-main p-5">
+    <div class="container text-center"> <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-snapchat-ghost"></a></div>
+</footer>
+</body>
+</html>

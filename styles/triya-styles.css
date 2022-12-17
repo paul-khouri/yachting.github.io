@@ -10,7 +10,6 @@
 body{
     font-size: 100%;
     background-color: var(--main-bg);
-    font-weight: lighter;
     letter-spacing: 0.1em;
 }
 .bg-main{
